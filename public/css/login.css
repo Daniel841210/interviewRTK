@@ -1,0 +1,204 @@
+/*登入頁面用CSS*/
+
+/*隱藏的項目*/
+.hide{
+    display: none !important;
+}
+
+/*body整體*/
+body {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/*中間白色方框內容*/
+.container {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    overflow: auto;
+    border-radius: 2em;
+    border: 0.3px grey solid;
+    margin-top: 2%; 
+}
+
+.row {
+    text-align: center;
+}
+
+/*標題下的內容*/
+#content{
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+
+/*上方大標題*/
+#title{
+    font-family:Microsoft JhengHei;
+    font-size: 320%;
+    font-weight: 900;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+/*左側黑色機械系圖案*/
+#logo_column{
+    text-align: center;
+}
+
+#logo_image{
+    height: 105%;
+    width: 80%;
+    border-radius: 5%;
+}
+
+/*帳密表單區域*/
+#form_column{
+   text-align: right;
+}
+
+/*帳號與密碼欄位*/
+#account_text, #password_text{
+    display: block;
+    width: 100%;
+    height: 2em;
+    color: #666666;
+    background: #e6e6e6;
+    font-family: Microsoft YaHei, FontAwesome;
+    font-size: 150%;
+    line-height: 1.5; 
+    text-indent:3%;
+    border-radius: 2em;
+    margin-top: 4.5%; 
+}
+
+
+#submit_div{
+    text-align: center;
+}
+
+/*登入按鈕*/
+#login_btn{ 
+    display: inline-block;
+    text-align: center;
+    width: 80%;
+    height: 2em;
+    color: #fff;
+    background: #1B306A;
+    font-family: Microsoft YaHei;
+    font-size: 130%;
+    line-height: 1.5;
+    border-radius: 2em;
+    margin-top: 8%;
+}
+
+#login_btn:hover{
+    background:blue;
+}
+
+/*loading圖示*/
+#loading{
+    margin-bottom: 2%;
+}
+
+/*帳密錯誤訊息*/
+#error_block{
+    text-align: center;
+    font-family: Microsoft YaHei;
+    font-size: 125%;
+    font-weight: 700;
+    border-radius: 1em;
+}
+
+/*下方說明文字*/
+#info_block{
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    height: 6.7em;
+    border-radius: 1.5em;
+}
+
+#info_block>ul{
+    display: inline-block;
+    text-align: left;
+    font-family: Microsoft YaHei;
+    font-size: 115%;
+    font-weight: 700; 
+}
+
+ul{
+    list-style-image: url("/images/bell.svg");
+}
+
+@media screen and (max-width: 1000px){
+    /*上方大標題*/
+    #title{ font-size: 250%; }
+}
+@media screen and (max-width: 700px){
+    /*上方大標題*/
+    #title{ font-size: 200%; }
+    /*中間白色方框內容*/
+    .container { margin-bottom: 2%;}
+    /*登入按鈕*/
+    #login_btn{ margin-top: 5%;}
+}
+
+@media screen and (max-width: 500px){
+    /*上方大標題*/
+    #title{ font-size: 150%; }
+    /*中間白色方框內容*/
+    .container { 
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+    /*帳號與密碼欄位*/
+    #account_text, #password_text{
+        width: 80%;
+        height: 40%;
+        margin-left: 10%;
+        font-size: 120%;
+    }
+    /*登入按鈕*/
+    #login_btn{ 
+        width: 50%;
+        font-size: 100%;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width: 400px){
+     /*上方大標題*/
+    #title{ font-size: 130%; }
+}
+
+@media screen and (max-width: 350px){
+     /*上方大標題*/
+    #title{ font-size: 100%; }
+    /*下方說明文字*/
+    #info_block{
+        width: 100%;
+        height: 6em;
+    }
+    #info_block>ul{
+        font-size: 95%;
+    }
+}
+
+@media screen and (max-width: 350px){
+    /*下方說明文字*/
+    #info_block{
+        width: 92%;
+        height: 5.5em;
+    }
+    #info_block>ul{
+        font-size: 80%;
+    }
+}

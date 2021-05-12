@@ -1,0 +1,103 @@
+/*職員基本資料區域*/
+#employee_column{
+    margin-top: 2%;
+    text-align: center;
+}
+
+/*人數區域*/
+.numberDiv{
+    text-align: left;
+    font-family: KaiTi;
+    font-size: 125%;
+    font-weight: 900;
+    margin-bottom: 0.5%;
+}
+
+/*顯示員工資料的table*/
+.student_table{
+    text-align: left;
+    table-layout:fixed;
+    width: 100%;
+    border: 2px black solid;
+    overflow-y: scroll;
+}
+
+/*table的標頭*/
+table>thead{
+    border-bottom-width: 1.5px;
+    border-bottom-style: solid;
+    border-bottom-color:darkgray;
+}
+
+/*table標頭的內容(列，橫的)*/
+table>thead>tr{
+    display: table;
+    text-align: center;
+    width: 100%;
+    table-layout: fixed;
+    font-family: KaiTi;
+    font-size: 125%;
+    font-weight: 900;
+}
+
+/*table的本體*/
+table>tbody{
+    display: block;
+    text-align: center;
+    overflow-y: scroll;
+    height: auto;
+    max-height: 12em; 
+    font-family: KaiTi;
+    font-size: 115%;
+    font-weight: 300;
+}
+
+/*table本體的內容(列，橫的)*/
+table>tbody>tr{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    white-space:nowrap;
+}
+
+/*table本體得內容(行，直的)*/
+table>tbody>tr>td{
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 1200px){
+   /*table的本體*/
+    table>tbody{max-height: 30vh; }
+}
+
+@media screen and (max-width: 800px){
+    /*顯示員工資料的table*/
+    .student_table{ width:100%;}
+    table>tbody{max-height: 17vh; }
+    table>tbody{ font-size: 90%; }
+    /*職員基本資料區域*/
+    #employee_column{ margin-left: 8%;}
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    /*職員基本資料區域*/
+    #employee_column{ margin-left: 8%;}
+    /*table的本體*/
+    table>tbody{
+        height: auto;
+        max-height: 35vh; 
+        font-size: 85%;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    /*table的本體*/
+    table>tbody{
+        height: auto;
+        font-size: 110%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+     #employee_column{ margin-left: 0%;}
+}

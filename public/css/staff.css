@@ -1,0 +1,179 @@
+/*個人基本資料用CSS*/
+
+/*隱藏的項目*/
+.hide{
+    display: none !important;
+}
+
+/*網頁內容區域*/
+.container-fluid {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: white;
+}
+
+/*上方nvbar*/
+.nvbar{
+    text-align: center;
+    background-color: black;
+}
+
+/*上方nvbar標題*/
+#title{
+    text-align: center;
+    color:white;
+    font-family: NSimSun;
+    font-size: 210%;
+    font-weight: 900;
+    margin-top: 0.3%;
+    margin-bottom: 0.3%;
+}
+
+/*登出按鈕*/
+#logout_btn{
+    margin-top: 0.3%;
+    margin-bottom: 0.5em;
+}
+
+#logout{
+    display: block;
+    color:white;
+    font-family: NSimSun;
+    font-size: 150%;
+    font-weight: 900;
+    text-decoration: none;
+    border: 2px white solid;
+    margin-top: 1%;
+}
+
+#logout:hover{
+    background-color: white;
+    color:black;
+}
+
+/*loading圖示*/
+#loading{
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+/*個人基本資料區域*/
+#content_column{
+    text-align: center;
+    margin-top: 1%;
+}
+
+/*職員基本資料大標題*/
+.title{
+    display: inline-block;
+    width: inherit;
+    background-color:dodgerblue;
+    color:white;
+    font-family: NSimSun;
+    font-weight: 900;
+    font-size: 180%; 
+    font-weight: 700;
+    border: 1.5px grey solid;
+    border-radius: 0.2em;
+    margin-top: 3%;
+}
+
+/*職員基本資料區域*/
+#profile_div{
+    display: inline-block;
+    width: inherit;
+    overflow: auto;
+    border: 1.5px grey solid;
+    border-radius: 0.2em;
+}
+
+/*職員基本資料*/
+#profile{
+    display: inline-block;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 10%;
+    float: center;
+}
+
+/*職員基本資料標頭*/
+.dataTitle{
+    display: inline-block;
+    font-family: Microsoft JhengHei;
+    font-size: 120%;
+    font-weight: 900;
+    margin-left: 1.5%;
+}
+
+/*職員基本資料內容*/
+.data{
+    display: inline-block;
+    font-family: Microsoft JhengHei;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+/*密碼欄位*/
+.password_field{
+    -webkit-text-security:disc; 
+}
+
+#password_field{
+    cursor: pointer;
+}
+
+/*下方提示文字*/
+#info_block{
+    display: inline-block;
+    text-align: center;
+    height:auto;
+    width:auto;
+    border-radius: 1.5em;
+    margin-top: 1em;
+}
+
+#info_block>ul{
+    display: inline-block;
+    text-align: left;
+    font-family: Microsoft YaHei;
+    font-size: 115%;
+    font-weight: 700;
+    margin-bottom: 1%;
+}
+
+ul{
+    list-style-image: url("/images/bullhorn.svg");
+}
+
+#info_block>ul>li{
+    margin-top: 1%;
+}
+
+@media screen and (max-width: 1000px){
+    #title{ font-size: 180%;}
+    #logout{ font-size: 130%; }
+    .title{ width: 120%; }
+    #profile_div{ width: 120%; }
+    /*職員基本資料區域*/
+    #content_column{ margin-left: -2.9%;}
+}
+
+@media screen and (max-width: 700px){
+    .title{ width: 100%; }
+    #profile_div{ width: 100%; }
+    #content_column{ margin-left: 0%;}
+}
+
+@media screen and (max-width: 400px){
+    #logout{ margin-bottom: 3%;}
+}
+
+@media screen and (max-width: 350px){
+    #info_block>ul{
+        font-size: 90%;
+    }
+}
