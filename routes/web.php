@@ -31,7 +31,7 @@ Route::group(['prefix'=>'employee', 'middleware'=>'employee.has.auth'], function
     Route::get('/','EmployeeController@showProfile'); //顯示個人資料
 });
 
-//管理員頁面相關(網址前綴為manager開頭，並使用middleware做權限控管)
+//主管相關(網址前綴為manager開頭，並使用middleware做權限控管)
 Route::group(['prefix'=>'manager', 'middleware'=>'manager.has.auth' ], function(){
-    Route::get('/','ManagerController@showProfile'); //顯示個人資料
+    Route::get('/','ManagerController@showProfile'); //顯示個人資料&一般員工資料
 });

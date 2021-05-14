@@ -49,7 +49,7 @@ class AuthController extends Controller
      //登出
     public function logout()
     {
-        Session::flush(); //清除登入狀態的Session資料(status、staffID)
+        Session::flush(); //清除登入狀態的Session資料(status、userID)
 
         return redirect('login'); //導向登入頁面
     }

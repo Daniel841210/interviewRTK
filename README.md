@@ -1,3 +1,39 @@
+﻿# Introduction
+- Login project for interview.<br>
+- Users are divided into managers and general employees.<br>
+- After logging in, direct to different pages based on different identities.<br>
+
+# Development Technology
+- Frontend : HTML, CSS, Javascript, jQuery, bootstrap.<br>
+- Backend : PHP, Laravel.<br>
+- Database : MySQL.<br>
+
+# File Navigation
+[Laravel Directory Structure](https://laravel.tw/docs/5.3/structure)
+
+## Model
+1. The central component of the pattern.  The application's dynamic data structure, independent of the user interface. It directly manages the data, logic and rules of the application.<br>
+2. File location:
+    * ./.env => ***Set up the database.***
+    * ./app/Entity => ***Set up table name, primary key, etc.***
+## View
+1. Any representation of information such as a chart, diagram or table. Multiple views of the same information are possible, such as a bar chart for management and a tabular view for accountants.
+2. File location:
+    * ./resources/views/layouts => ***Web page rendering blade.***
+## Controller
+1. Accepts input and converts it to commands for the model or view.
+2. File location:
+    * ./app/Http/Controllers/AuthController.php、./app/Http/Controllers/EmployeeController.php、./app/Http/Controllers/ManagerController => ***Handle the HTTP request and execute the corresponding action.***
+    * ./app/Http/Middleware/EmployeeHasAuth、./app/Http/Middleware/ManagerHasAuth => ***Handle browsing permission control.***
+    * ./app\Http/Kernel.php => ***Set up middleware.***
+    * ./routes/web.php => ***Define all routes for the application.***
+
+## Website Public Resources
+File location: <br>
+    * ./public/css <br>
+    * ./public/js <br>
+    * ./public/images <br>
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">

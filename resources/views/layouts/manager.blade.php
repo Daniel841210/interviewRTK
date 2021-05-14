@@ -1,4 +1,4 @@
-<!--一般員工個人資料頁面-->
+<!--主管個人資料頁面-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -150,9 +150,10 @@
     <script src="https://use.fontawesome.com/cb9ded6874.js"></script>
     
     <script>
-        var status = {!! json_encode($status) !!};
-        var all_Num = {!! json_encode($all_Num) !!}; //總人數
+        var status = {!! json_encode($status) !!}; //取得來自controller的資料(職位)
+        var all_Num = {!! json_encode($all_Num) !!}; //取得來自controller的資料(總人數)
         
+        //設定職位欄位
         $(document).ready(function(){
             if( status == "employee"){
                 $("#status").text("一般員工");
@@ -161,16 +162,17 @@
                 $("#status").text("主管");
             }
             
+            //顯示(隱藏)密碼
             $("#password_field").click(function(){
                 $("#password_field").toggleClass("password_field");
             });
             
-            $("#number").text("人數:" + all_Num); //顯示預設場次(總覽)的人數
+            $("#number").text("人數:" + all_Num); //顯示一般員工總人數
         });
         //按下登出按鈕
         $( "#logout" ).click(function() {
             $("#loading").removeClass( "hide" ); //顯示laoding樣式
-            localStorage.clear(); //移除前端網頁站存內的登入狀態
+            localStorage.clear(); //移除前端網頁暫存內的登入狀態
         });
     </script>
 </body>

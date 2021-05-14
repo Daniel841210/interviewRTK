@@ -114,7 +114,8 @@
     <script src="https://use.fontawesome.com/cb9ded6874.js"></script>
     
     <script>
-        var status = {!! json_encode($status) !!};
+        var status = {!! json_encode($status) !!}; //取得來自controller的資料(職位)
+        // 設定職位欄位
         $(document).ready(function(){
             if( status == "employee"){
                 $("#status").text("一般員工");
@@ -123,6 +124,7 @@
                 $("#status").text("主管");
             }
             
+            //顯示(隱藏)密碼
             $("#password_field").click(function(){
                 $("#password_field").toggleClass("password_field");
             });
@@ -130,7 +132,7 @@
         //按下登出按鈕
         $( "#logout" ).click(function() {
             $("#loading").removeClass( "hide" ); //顯示laoding樣式
-            localStorage.clear(); //移除前端網頁站存內的登入狀態
+            localStorage.clear(); //移除前端網頁暫存內的登入狀態
         });
     </script>
 </body>
