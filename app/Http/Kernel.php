@@ -65,6 +65,7 @@ class Kernel extends HttpKernel
         //自定義之middleware
         'employee.has.auth' => \App\Http\Middleware\EmployeeHasAuth::class,
         'manager.has.auth' => \App\Http\Middleware\ManagerHasAuth::class,
+        'user.has.auth' => \App\Http\Middleware\UserHasAuth::class,
     ];
 
     /**

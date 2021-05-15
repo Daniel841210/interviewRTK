@@ -15,10 +15,10 @@ class AuthController extends Controller
     //登入頁面
     public function loginPage()
     {   
-        return view('layouts/login');
+        return view('layouts/login'); //顯示登入頁面
     }
     
-     //登入
+    //登入
     public function login(Request $request)
     {
         $account = $request->input('account'); //取得使用者輸入的帳號
@@ -31,22 +31,32 @@ class AuthController extends Controller
             
             return redirect()->back(); //重新導回此頁面(登入)
         }
-        else{ 
-            Session::put('status', $userData[0]['status']); 
+        else{
+            Session::put('userID', $userData[0]['staffID']); //將登入者ID加入Session
+            return redirect('otpAuthPage');
             
-            //判斷登入者身分(主管或一般員工)
-            if( Session::get('status') === 'employee' ){ 
-                Session::put('userID', $userData[0]['staffID']); //將登入者ID加入Session
-                return redirect('employee'); //導向一般員工頁面
-            }
-            else if( Session::get('status') === 'manager'){ 
-                Session::put('userID', $userData[0]['staffID']); //將登入者ID加入Session
-                return redirect('manager'); //導向主管頁面
-            }  
         } 
     }
     
-     //登出
+    public function otpAuthPage(){
+        return view('layouts/otpAuth'); //顯示otp認證頁面
+    }
+    
+    //opt驗證
+    public function OtpAuthSuccess(){
+        $userData = Member::where('staffID', (string)(Session::get('userID')) )->get(); //根據Session中userID取出對應職員的全部資料
+        Session::put('status', $userData[0]['status']);  //將登入者身分加入Session
+        
+        //判斷登入者身分(主管或一般員工)
+        if( Session::get('status') === 'employee' ){ 
+            return redirect('employee'); //導向一般員工頁面
+        }
+        else if( Session::get('status') === 'manager'){ 
+            return redirect('manager'); //導向主管頁面
+        }  
+    }
+    
+    //登出
     public function logout()
     {
         Session::flush(); //清除登入狀態的Session資料(status、userID)

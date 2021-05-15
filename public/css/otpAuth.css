@@ -1,0 +1,91 @@
+#verify_div{
+    width: inherit;
+    height: auto
+    overflow: auto;
+    border: 1.5px grey solid;
+    border-radius: 0.2em;
+    text-align: center;
+}
+
+#send_email{
+    margin-top: 2%;
+    text-align: center;
+}
+
+#email_text{
+    width: 13vw;
+    font-size: 80%;
+}
+
+#send_button{
+    text-align: center;
+    margin-top: 3%;
+    color: white;
+    border-radius: 2em;
+    font-family: NSimSun;
+    font-weight: 600;
+}
+
+#time_div{
+    display: block;
+    font-family: NSimSun;
+    font-weight: 600;
+    font-size: 120%;
+    background-color: aliceblue;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#verify_totp{
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+#totp_text{
+    width:30%;
+    font-family: NSimSun;
+    font-weight: 900;
+    text-align: center;
+}
+
+#verify_button{
+    margin-left: 2%;
+    font-weight: 600;
+    font-family: NSimSun;
+}
+
+#error_block{
+    display: block;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+}
+
+ul{
+    list-style-image: url("/images/hand-point.svg");
+}
+
+#my_modal{
+    font-weight: 600;
+    font-family: NSimSun;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px){
+    #verify_div{ width: 120%; }
+    #email_text{ width: 80%; }
+    
+}
+
+@media screen and (max-width: 700px){
+    #verify_div{ width: 100%; }
+    #email_text{ width: inherit; }
+}
+
+@media screen and (max-width: 400px){
+    #email_text{ width: 80%; }
+}
+
+@media screen and (max-width: 350px){
+    #email_text{ width: 80%; }
+}
