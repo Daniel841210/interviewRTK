@@ -15,7 +15,7 @@
 ## Introduction
 1. A one-time password (OTP), is a password that is valid for only one login session or transaction, on a computer system or other digital device.
 2. OTP Verification verifies Email Address/Mobile Number of users by sending OTP verification code during registration and login.
-3. In this project we use javascript library to implement.
+3. In this project we use javascript library otplib to implement.
 
 ## Reference
 - [OneTimePasswordDemo](https://github.com/wellwind/OneTimePasswordDemo)
