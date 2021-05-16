@@ -3,10 +3,27 @@
 - Users are divided into managers and general employees.<br>
 - After logging in, direct to different pages based on different identities.<br>
 
+# Update
+- Add OTP Verification after login.
+
 # Development Technology
 - Frontend : HTML, CSS, Javascript, jQuery, bootstrap.<br>
 - Backend : PHP, Laravel.<br>
 - Database : MySQL.<br>
+
+# OTP Verification
+## Introduction
+1. A one-time password (OTP), is a password that is valid for only one login session or transaction, on a computer system or other digital device.
+2. OTP Verification verifies Email Address/Mobile Number of users by sending OTP verification code during registration and login.
+3. In this project we use javascript library to implement.
+
+## Reference
+- [OneTimePasswordDemo](https://github.com/wellwind/OneTimePasswordDemo)
+- [一次性密碼演算法](https://wellwind.idv.tw/blog/2017/09/07/one-time-pass-introduce-with-hotp-totp-google-authenticator/)
+- [JS-OTP](https://github.com/jiangts/JS-OTP)
+- [otplib](https://www.npmjs.com/package/otplib)
+- [otplib](https://github.com/yeojz/otplib)
+- [otplib](https://otplib.yeojz.dev/)
 
 # File Navigation
 [Laravel Directory Structure](https://laravel.tw/docs/5.3/structure)
@@ -23,8 +40,8 @@
 ## Controller
 1. Accepts input and converts it to commands for the model or view.
 2. File location:
-    * ./app/Http/Controllers/AuthController.php、./app/Http/Controllers/EmployeeController.php、./app/Http/Controllers/ManagerController => ***Handle the HTTP request and execute the corresponding action.***
-    * ./app/Http/Middleware/EmployeeHasAuth、./app/Http/Middleware/ManagerHasAuth => ***Handle browsing permission control.***
+    * ./app/Http/Controllers => ***Handle the HTTP request and execute the corresponding action.***
+    * ./app/Http/Middleware/EmployeeHasAuth, ./app/Http/Middleware/ManagerHasAuth, ./app/Http/Middleware/UserHasAuth => ***Handle browsing permission control.***
     * ./app\Http/Kernel.php => ***Set up middleware.***
     * ./routes/web.php => ***Define all routes for the application.***
 
