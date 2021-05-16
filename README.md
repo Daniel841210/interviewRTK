@@ -25,7 +25,7 @@
 - [otplib](https://github.com/yeojz/otplib)
 - [otplib](https://otplib.yeojz.dev/)
 
-# File Navigation
+# Laravel File Navigation
 [Laravel Directory Structure](https://laravel.tw/docs/5.3/structure)
 
 ## Model
