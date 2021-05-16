@@ -38,7 +38,7 @@
              <div class="col-md-1"></div>
         </div>
         
-        <!--職員基本資料-->
+        <!--驗資資料-->
         <div class="row">
             <div class="col-md-4"></div>
             
@@ -46,6 +46,7 @@
                 <div class="title">驗證電子郵件</div>
                 
                 <div id="verify_div">
+                    <!--電子郵件表單-->
                     <form id="send_email">
                         <div class="row" style="text-align:center; display:block;" >
                             <div style="display:inline-block"> 
@@ -62,15 +63,18 @@
                         </div>
                     </form>
                     
+                    <!--有效期限倒數計時器-->
                     <br>
                     <div id="time_div"> <span id="timeLeft">驗證碼有效時間剩餘: &nbsp  秒</span> </div>
                     <br>
                     
+                    <!--驗證表單-->
                     <form id="verify_totp">
                             <input type="text" id="totp_text" maxlength="6" required="required">
                             <input class="btn btn-success" type="submit" id="verify_button" value="確認"  disabled/> 
                     </form>
                     
+                    <!--驗證碼錯誤訊息-->
                     <div class="alert alert-danger fade" id="error_block"> 
                         <strong>驗證碼錯誤</strong> 
                     </div>
@@ -84,7 +88,7 @@
             <ul>
                 <li>請輸入正確電子郵件</li>
                 <li>請於有效時限內完成驗證</li>
-                <li>短期間錯誤過多次將使驗證碼失效</li>
+                <li>錯誤過多次將使驗證碼失效</li>
             </ul>
         </div>
     </div>
@@ -100,7 +104,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <!--標題-->
-                    <h4 class="modal-title" style="text-align:center">認證碼已送出</h4>
+                    <h4 class="modal-title" style="text-align:center">驗證碼已送出</h4>
                 </div>
                 <!--內文-->
                 <div class="modal-body" style="text-align:center;">
@@ -169,7 +173,7 @@
                     countDownTimer = setInterval(countDown, 1000); //開始倒數
                     $('#modal_body_content').text("驗證碼已寄送至: "+ email); //顯示寄送成功訊息
                     $("#my_modal").modal(); //建立modal
-                    $('#totp_text').val("");
+                    $('#totp_text').val(""); //清除驗證碼輸入欄位
                     $('#verify_button').prop("disabled", false); //移除認證按鈕的禁用屬性
                     $("#verify_button").attr("title", ""); //移除滑鼠移至按鈕顯示訊息
                 });
@@ -205,6 +209,7 @@
                 });
                 //認證結果
                 if (result) {
+                    localStorage.setItem('OTPSuccess', 'true'); //將OTP認證加入前端網頁的暫存
                     alert("驗證成功")
                     window.location.href = "otpAuthPage/success"; //認證成功，導向使用者頁面
                 } else {
@@ -216,5 +221,4 @@
     
     </script>
 </body>
-
 </html>

@@ -8,6 +8,10 @@
     <script type="text/javascript" src="{{ URL::asset('js/checkLogin.js') }}"></script>
     <script> checkLogin(); </script> 
     
+    <!--檢查認證狀態-->
+    <script type="text/javascript" src="{{ URL::asset('js/checkOTP.js') }}"></script>
+    <script> checkOTP(); </script> 
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -143,6 +147,7 @@
             </ul>
         </div>
     </div>
+    <strong>{{ Session::get('OTPSuccess') }}</strong> 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>

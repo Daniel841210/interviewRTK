@@ -33,20 +33,21 @@ class AuthController extends Controller
         }
         else{
             Session::put('userID', $userData[0]['staffID']); //將登入者ID加入Session
-            return redirect('otpAuthPage');
+            return redirect('otpAuthPage'); //導向OTP認證頁面
             
         } 
     }
     
+    //OTP認證頁面
     public function otpAuthPage(){
-        return view('layouts/otpAuth'); //顯示otp認證頁面
+        return view('layouts/otpAuth'); //顯示OTP認證頁面
     }
     
-    //opt驗證
+    //OTP驗證
     public function OtpAuthSuccess(){
         $userData = Member::where('staffID', (string)(Session::get('userID')) )->get(); //根據Session中userID取出對應職員的全部資料
         Session::put('status', $userData[0]['status']);  //將登入者身分加入Session
-        
+
         //判斷登入者身分(主管或一般員工)
         if( Session::get('status') === 'employee' ){ 
             return redirect('employee'); //導向一般員工頁面
