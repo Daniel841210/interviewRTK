@@ -164,8 +164,8 @@ $(document).ready(function(){
         if (result) {
             localStorage.setItem('OTPVerify', true); //將OTP認證加入前端網頁的暫存
             clearInterval(countDownTimer); //停止倒數
-            $('#timeLeft').text("認證完成，請登入!");
-            alert("認證完成!")
+            $('#timeLeft').text("認證完成!");
+            alert("認證完成，請登入!")
         } else {
             $("#error_block").show(); //顯示登入失敗提示
             var msg = document.getElementById("error_block");
