@@ -5,12 +5,7 @@
 
 <head>
     <!--檢查登入狀態，避免登出後返回上一頁-->
-    <script type="text/javascript" src="{{ URL::asset('js/checkLogin.js') }}"></script>
-    <script> checkLogin(); </script> 
-    
-    <!--檢查認證狀態-->
-    <script type="text/javascript" src="{{ URL::asset('js/checkOTP.js') }}"></script>
-    <script> checkOTP(); </script> 
+    <script type="text/javascript" src="{{ URL::asset('js/checkLogin.js') }}"></script> 
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

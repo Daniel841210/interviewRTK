@@ -6,3 +6,5 @@ function checkLogin(){
         window.location.href = "/login"; //若無登入狀態則強制返回登入頁面
     } 
 }
+
+window.onload=checkLogin;

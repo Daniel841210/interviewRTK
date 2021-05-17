@@ -27,6 +27,7 @@ body {
     border-radius: 2em;
     border: 0.3px grey solid;
     margin-top: 2%; 
+    margin-bottom: 2%; 
 }
 
 .row {
@@ -86,7 +87,7 @@ body {
 
 /*登入按鈕*/
 #login_btn{ 
-    display: inline-block;
+/*    display: inline-block;*/
     text-align: center;
     width: 80%;
     height: 2em;
@@ -119,10 +120,10 @@ body {
 
 /*下方說明文字*/
 #info_block{
-    display: inline-block;
+    display: inner-block;
     text-align: center;
     width: auto;
-    height: 6.7em;
+    height: 85%;
     border-radius: 1.5em;
 }
 
@@ -130,7 +131,7 @@ body {
     display: inline-block;
     text-align: left;
     font-family: Microsoft YaHei;
-    font-size: 115%;
+    font-size: 100%;
     font-weight: 700; 
 }
 

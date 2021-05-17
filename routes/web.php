@@ -26,12 +26,6 @@ Route::group(['prefix'=>'logout' ], function(){
     Route::get('/','AuthController@logout'); //處理登出
 });
 
-//驗證相關(網址前墜為otpAuth開頭，並使用middleware做權限控管)
-Route::group(['prefix'=>'otpAuthPage', 'middleware'=>'user.has.auth'], function(){
-    Route::get('/','AuthController@OtpAuthPage'); //認證頁面
-    Route::get('/success','AuthController@OtpAuthSuccess'); //認證成功
-});
-
 //一般員工相關(網址前綴為student開頭，並使用middleware做權限控管)
 Route::group(['prefix'=>'employee', 'middleware'=>'employee.has.auth'], function(){
     Route::get('/','EmployeeController@showProfile'); //顯示個人資料
