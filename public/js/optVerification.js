@@ -1,5 +1,5 @@
 
-function drawOTPBlock(){
+function implementOTP(){
     $("#otp_div").html('<!--電子郵件表單-->\
                          <form id="send_email">\
                             <div class="row" style="text-align:center; display:block;" >\
@@ -57,13 +57,20 @@ function drawOTPBlock(){
     $("#error_block").hide(); //隱藏錯誤訊息
     localStorage.removeItem('OTPVerify'); //重整頁面時清除OTP認證
     
-    // 引入外部檔案
+    // 引入外部js檔案
     $.getScript('https://unpkg.com/otplib@^6.0.0/otplib-browser.js'); //otp驗證
     $.getScript('https://smtpjs.com/v3/smtp.js'); // 寄信
+    
+    //引入外部css檔案
+    $('<link/>', {
+       rel: 'stylesheet',
+       type: 'text/css',
+       href: 'https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/css/otpAuth.css'
+    }).appendTo('head');
 }
 
 //畫面載入後執行上述方法
-jQuery(document).ready(function($){ drawOTPBlock(); });
+jQuery(document).ready(function($){ implementOTP(); });
 
 
 $(document).ready(function(){

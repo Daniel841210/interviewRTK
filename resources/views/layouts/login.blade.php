@@ -13,6 +13,7 @@
     
     <!--OTP認證功能-->
     <script type="text/javascript" src="{{ URL::asset('js/optVerification.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/optVerification.js"></script>
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +24,9 @@
     <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}"> <!--瀏覽器左上角圖示-->
     <link href="{{ asset('css/login.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/otpAuth.css') }}" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/css/otpAuth.css" rel="stylesheet" />
+
+
     
     <!--    Bootstrap-->
     <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css') }}">
