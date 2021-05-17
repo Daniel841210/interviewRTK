@@ -12,8 +12,8 @@
 -->
     
     <!--OTP認證功能-->
-    <script type="text/javascript" src="{{ URL::asset('js/optVerification.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/optVerification.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/otpAuth.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/otpAuth.js"></script>
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
