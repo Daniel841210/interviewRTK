@@ -25,7 +25,7 @@
 3. File location : ./public/js/VerifyOTP.js .
 
 ### Tutorial
-1. Create an **div element with <u>ID otp_div<u>** in your own page. <br>
+1. Create an **div element with** **<u>ID otp_div<u>** in your own page. <br>
 ```.html 
     <div id="otp_div"></div> 
 ``` 
