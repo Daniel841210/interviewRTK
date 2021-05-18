@@ -174,6 +174,7 @@ $(document).ready(function(){
             sessionStorage.setItem('OTPVerify', true); //將OTP認證加入前端網頁的暫存
             clearInterval(countDownTimer); //停止倒數
             $('#timeLeft').text("認證完成!");
+            $('#verify_button').prop("disabled", true); //驗證完成則禁用確認按鈕
             alert("認證完成，請登入!")
         } else {
             $("#error_block").show(); //顯示登入失敗提示

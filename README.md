@@ -17,6 +17,14 @@
 2. OTP Verification verifies Email Address/Mobile Number of users by sending OTP verification code during registration and login.
 3. In this project we use javascript library otplib to implement.
 
+## Custome .js File
+### Introduction
+1. In this file we implement the Email OTP Verification.
+2. Users can import and use this function to their own pages.
+### Tutorial
+1. Create an div element with id otp_div in your own page.
+` <div id="otp_div"></div>'
+
 ## Reference
 - [OneTimePasswordDemo](https://github.com/wellwind/OneTimePasswordDemo)
 - [一次性密碼演算法](https://wellwind.idv.tw/blog/2017/09/07/one-time-pass-introduce-with-hotp-totp-google-authenticator/)

@@ -12,7 +12,6 @@
 -->
     
     <!--OTP認證功能-->
-    <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/verifyOTP.js"></script>
     <script type="text/javascript" src="{{ URL::asset('js/verifyOTP.js') }}"></script>
     
     
@@ -24,7 +23,6 @@
     
     <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}"> <!--瀏覽器左上角圖示-->
     <link href="{{ asset('css/login.css') }}" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/css/verifyOTP.css" rel="stylesheet" />
     <link href="{{ asset('css/verifyOTP.css') }}" rel="stylesheet" />
     
     <!--    Bootstrap-->
