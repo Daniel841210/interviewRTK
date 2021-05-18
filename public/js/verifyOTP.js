@@ -55,7 +55,7 @@ function implementOTP(){
                         ');
     
     $("#error_block").hide(); //隱藏錯誤訊息
-    localStorage.removeItem('OTPVerify'); //重整頁面時清除OTP認證
+    sessionStorage.removeItem('OTPVerify'); //重整頁面時清除OTP認證
     
     // 引入外部js檔案
     $.getScript('https://unpkg.com/otplib@^6.0.0/otplib-browser.js'); //otp驗證
@@ -65,13 +65,22 @@ function implementOTP(){
     $('<link/>', {
        rel: 'stylesheet',
        type: 'text/css',
-       href: 'https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/css/otpAuth.css'
+       href: 'https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/css/verifyOTP.css'
+    }).appendTo('head');
+    $('<link/>', {
+       rel: 'stylesheet',
+       type: 'text/css',
+       href: 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
+    }).appendTo('head');
+    $('<link/>', {
+       rel: 'stylesheet',
+       type: 'text/css',
+       href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
     }).appendTo('head');
 }
 
 //畫面載入後執行上述方法
 jQuery(document).ready(function($){ implementOTP(); });
-
 
 $(document).ready(function(){
     var validTime = "120"; //totp有效時間
@@ -162,7 +171,7 @@ $(document).ready(function(){
         });
         //認證結果
         if (result) {
-            localStorage.setItem('OTPVerify', true); //將OTP認證加入前端網頁的暫存
+            sessionStorage.setItem('OTPVerify', true); //將OTP認證加入前端網頁的暫存
             clearInterval(countDownTimer); //停止倒數
             $('#timeLeft').text("認證完成!");
             alert("認證完成，請登入!")

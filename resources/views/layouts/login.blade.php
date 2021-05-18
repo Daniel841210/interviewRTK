@@ -12,8 +12,9 @@
 -->
     
     <!--OTP認證功能-->
-    <script type="text/javascript" src="{{ URL::asset('js/otpAuth.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/otpAuth.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/verifyOTP.js"></script>
+    <script type="text/javascript" src="{{ URL::asset('js/verifyOTP.js') }}"></script>
+    
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,10 +24,8 @@
     
     <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}"> <!--瀏覽器左上角圖示-->
     <link href="{{ asset('css/login.css') }}" rel="stylesheet" />
-    <link href="{{ asset('css/otpAuth.css') }}" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/css/otpAuth.css" rel="stylesheet" />
-
-
+    <link href="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/css/verifyOTP.css" rel="stylesheet" />
+    <link href="{{ asset('css/verifyOTP.css') }}" rel="stylesheet" />
     
     <!--    Bootstrap-->
     <link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css') }}">
@@ -84,10 +83,10 @@
             <div class="col-md-4" style="text-align:center">
                 <div class="alert alert-info" id="info_block" >
                     <ul>
+                        <li>請先驗證後再進行登入</li>
                         <li>請輸入提供之帳號與密碼</li>
                         <li>使用者分為主管與一般員工</li>
                         <li>將依據不同身份導向不同頁面</li>
-                        <li>請輸入認證電子郵件</li>
                         <li>請於有效時限內完成驗證</li>
                         <li>錯誤過多次將使驗證碼失效</li>
                     </ul>
@@ -123,7 +122,7 @@
     
         //按下登入按紐
         $( "#login_btn" ).click(function() {
-            if ( (localStorage.getItem('OTPVerify')) == null){
+            if ( (sessionStorage.getItem('OTPVerify')) == null){
                 alert("請先進行OTP認證")
             }
             else{
