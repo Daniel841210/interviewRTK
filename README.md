@@ -23,7 +23,7 @@
 2. Users can import and use this function to their own pages.
 ### Tutorial
 1. Create an div element with id otp_div in your own page.
-` <div id="otp_div"></div>'
+` <div id="otp_div"></div> `
 
 ## Reference
 - [OneTimePasswordDemo](https://github.com/wellwind/OneTimePasswordDemo)
