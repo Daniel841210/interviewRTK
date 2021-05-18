@@ -26,7 +26,7 @@
 
 ### Tutorial
 1. Create an **div element with ++ID otp_div++** in your own page. <br>
-``` =html  <div id="otp_div"></div> ``` 
+```.html <div id="otp_div"></div> ``` 
 
 2. Import .js file from github CDN. <br>
 ` <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/verifyOTP.js"></script> `
