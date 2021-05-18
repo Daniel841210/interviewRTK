@@ -41,7 +41,7 @@
 
 5. The browser storage will be cleared every time the page is loaded.
 
-6. Only needs to determine whether browser storage exist or not and combine with your own functions. <br>
+6. Only needs to **determine whether browser storage exist or not** and combine with your own functions. <br>
 ``` *.js
     if ( (sessionStorage.getItem('OTPVerify')) != null){  //your own code  } 
 ```
