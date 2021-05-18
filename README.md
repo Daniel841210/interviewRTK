@@ -25,13 +25,15 @@
 3. File location : ./public/js/VerifyOTP.js .
 
 ### Tutorial
-1. Create an **div element with ++ID otp_div++** in your own page. <br>
+1. Create an **div element with <u>ID otp_div<u>** in your own page. <br>
 ```.html 
     <div id="otp_div"></div> 
 ``` 
 
 2. Import .js file from github CDN. <br>
-` <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/verifyOTP.js"></script> `
+```.html 
+<script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/verifyOTP.js"></script> 
+``` 
 
 3. It will automatically load the OTP verification HTML components and follow-up process to this block.
 
@@ -40,7 +42,9 @@
 5. The browser storage will be cleared every time the page is loaded.
 
 6. Only needs to determine whether browser storage exist or not and combine with your own functions. <br>
-` if ( (sessionStorage.getItem('OTPVerify')) != null){  //your own code  } `
+``` *.js
+    if ( (sessionStorage.getItem('OTPVerify')) != null){  //your own code  } 
+```
 
 ## Reference
 - [OneTimePasswordDemo](https://github.com/wellwind/OneTimePasswordDemo)
