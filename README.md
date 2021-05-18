@@ -27,6 +27,11 @@
 ` <div id="otp_div"></div> `
 2. Import .js file from github CDN. <br>
 ` <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/verifyOTP.js"></script> `
+3. It will automatically load the OTP verification HTML components and follow-up process to this block.
+4. When the Verification is successful, a front-end browser storage (SessionStorage) named OTPVerify will be added in.
+5. The browser storage will be cleared every time the page is loaded.
+6. Only needs to determine whether browser storage exist or not and combine with your own functions.
+` if ( (sessionStorage.getItem('OTPVerify')) != null){ ...your own code... } `
 
 ## Reference
 - [OneTimePasswordDemo](https://github.com/wellwind/OneTimePasswordDemo)
