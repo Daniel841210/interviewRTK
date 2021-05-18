@@ -23,14 +23,14 @@
 2. Users can import and use this function to their own pages.
 3. File location : ./public/js/VerifyOTP.js .
 ### Tutorial
-1. Create an div element with id otp_div in your own page. <br>
+1. Create an **div element with ID otp_div** in your own page. <br>
 ` <div id="otp_div"></div> `
 2. Import .js file from github CDN. <br>
 ` <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/verifyOTP.js"></script> `
 3. It will automatically load the OTP verification HTML components and follow-up process to this block.
 4. When the Verification is successful, a front-end browser storage (SessionStorage) named OTPVerify will be added in.
 5. The browser storage will be cleared every time the page is loaded.
-6. Only needs to determine whether browser storage exist or not and combine with your own functions.
+6. Only needs to determine whether browser storage exist or not and combine with your own functions. <br>
 ` if ( (sessionStorage.getItem('OTPVerify')) != null){ ...your own code... } `
 
 ## Reference
