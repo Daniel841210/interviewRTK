@@ -21,9 +21,12 @@
 ### Introduction
 1. In this file we implement the Email OTP Verification.
 2. Users can import and use this function to their own pages.
+3. File location : ./public/js/VerifyOTP.js .
 ### Tutorial
-1. Create an div element with id otp_div in your own page.
+1. Create an div element with id otp_div in your own page. <br>
 ` <div id="otp_div"></div> `
+2. Import .js file from github CDN. <br>
+` <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/verifyOTP.js"></script> `
 
 ## Reference
 - [OneTimePasswordDemo](https://github.com/wellwind/OneTimePasswordDemo)
