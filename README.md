@@ -26,12 +26,17 @@
 
 ### Tutorial
 1. Create an **div element with ++ID otp_div++** in your own page. <br>
-` <div id="otp_div"></div> `<br>
+``` =html  <div id="otp_div"></div> ``` 
+
 2. Import .js file from github CDN. <br>
-` <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/verifyOTP.js"></script> `<br>
-3. It will automatically load the OTP verification HTML components and follow-up process to this block.<br>
-4. When the Verification is successful, a front-end browser storage (SessionStorage) named OTPVerify will be added in.<br>
-5. The browser storage will be cleared every time the page is loaded.<br>
+` <script src="https://cdn.jsdelivr.net/gh/ycliu666/interviewRTK/public/js/verifyOTP.js"></script> `
+
+3. It will automatically load the OTP verification HTML components and follow-up process to this block.
+
+4. When the Verification is successful, a front-end browser storage (SessionStorage) named OTPVerify will be added in.
+
+5. The browser storage will be cleared every time the page is loaded.
+
 6. Only needs to determine whether browser storage exist or not and combine with your own functions. <br>
 ` if ( (sessionStorage.getItem('OTPVerify')) != null){  //your own code  } `
 
